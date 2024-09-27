@@ -2,6 +2,7 @@
 
 import styled from 'styled-components';
 import { FlexContainer } from '../UI/common/FlexContainer';
+import { MainInput } from '../UI/inputs/MainInput/MainInput';
 
 export const Container = styled.header`
   width: 100%;
@@ -16,6 +17,22 @@ export const Container = styled.header`
 
 export const Profile = styled(FlexContainer)`
   flex-direction: row;
-  gap: 22px;
+  gap: 18px;
   align-items: center;
+`;
+
+export const ProfileButton = styled.button`
+  width: 40px;
+  aspect-ratio: 1;
+  background: #94a3b8;
+  border-radius: 50px;
+  padding: 8px 16px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: white;
+`;
+
+export const SearchInput = styled(MainInput)`
+  flex: 1;
 `;

@@ -4,6 +4,8 @@ import '../global.css';
 import '../reset.css';
 import StyledComponentsRegistry from '../styledRegistry';
 import { MainLayout } from '@/components/UI/layouts/MainLayout/MainLayout';
+import { AuthProvider } from '@/context/AuthContext';
+import userImg from '@/assets/img/JohnDoe.jpeg';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -24,7 +26,18 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <StyledComponentsRegistry>
-          <MainLayout>{children}</MainLayout>
+          <AuthProvider
+            auth={{
+              isAuth: true,
+              userInfo: {
+                id: '1',
+                name: 'John Doe',
+                userImg: userImg.src,
+              },
+            }}
+          >
+            <MainLayout>{children}</MainLayout>
+          </AuthProvider>
         </StyledComponentsRegistry>
       </body>
     </html>

@@ -11,4 +11,6 @@ export const Container = styled.div`
 
 export const Main = styled.main`
   flex: 1;
+  padding: 40px 80px 80px 120px;
+  box-sizing: border-box;
 `;
