@@ -23,6 +23,6 @@ export const FlexContainer = styled.div<FlexProps>`
   justify-content: ${({ $justifyContent }) => $justifyContent};
   flex-wrap: ${({ $wrap }) => $wrap};
   gap: ${({ $gap }) =>
-    $gap ? (typeof $gap === 'number' ? $gap + 'px' : $gap) : '8px'};
+    $gap != null ? (typeof $gap === 'number' ? $gap + 'px' : $gap) : '8px'};
   flex-direction: ${({ $direction }) => $direction ?? 'column'};
 `;
