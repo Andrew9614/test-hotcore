@@ -3,13 +3,13 @@ export interface DialogItem {
   name: string;
   lastMessage: string;
   userImg?: string;
-  lastMessageDate?: number;
+  lastMessageDate: number;
 }
 
 export interface MessageItem {
   id: string;
   text: string;
-  date: string;
+  date: number;
   userId: string;
   userImg?: string;
 }

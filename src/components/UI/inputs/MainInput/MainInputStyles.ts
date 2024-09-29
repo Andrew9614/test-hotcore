@@ -10,23 +10,13 @@ export const Container = styled.div`
   font-size: 12px;
 `;
 
-export const InputContainer = styled.div`
-  position: relative;
-  min-height: 40px;
-  border: 1px solid black;
-  border-radius: 8px;
-`;
-
-export const InputErrorMessage = styled.div`
-  color: red;
-  font-size: 14px;
-`;
-
 export const InputWrapper = styled.div`
+  height: 100%;
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 4px 12px;
+  box-sizing: border-box;
 `;
 
 export const Input = styled.input`
@@ -52,9 +42,11 @@ export const Input = styled.input`
 export const Suffix = styled.div`
   height: 100%;
   display: flex;
+  align-items: center;
 `;
 
 export const Prefix = styled.div`
   height: 100%;
   display: flex;
+  align-items: center;
 `;

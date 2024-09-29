@@ -8,6 +8,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 export const Container = styled(FlexContainer)`
+  flex-shrink: 0;
   width: 290px;
   border-radius: 16px;
   background-color: #f8fafc;

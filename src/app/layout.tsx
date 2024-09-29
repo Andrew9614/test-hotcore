@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import '../global.css';
 import '../reset.css';
+import '../global.css';
 import StyledComponentsRegistry from '../styledRegistry';
 import { MainLayout } from '@/components/UI/layouts/MainLayout/MainLayout';
 import { AuthProvider } from '@/context/AuthContext';
@@ -30,7 +30,7 @@ export default function RootLayout({
             auth={{
               isAuth: true,
               userInfo: {
-                id: '1',
+                id: 'john_doe',
                 name: 'John Doe',
                 userImg: userImg.src,
               },

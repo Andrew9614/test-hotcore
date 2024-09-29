@@ -7,20 +7,17 @@ import NotificationsIcon from '@/assets/svg/bell-icon.svg';
 import SearchIcon from '@/assets/svg/magnifier-icon.svg';
 import logoImg from '@/assets/img/logo.png';
 import { IconButton } from '../UI/buttons/IconButton';
-import { MainInput } from '../UI/inputs/MainInput/MainInput';
 
 export const Header = () => {
   return (
     <S.Container>
-      <FlexContainer $gap={40} $alignItems="center" $direction="row">
-        <FlexContainer $gap={30} $alignItems="center" $direction="row">
-          <FlexContainer $gap={0} $alignItems="center" $direction="row">
-            <Image src={logoImg} alt="logo" width={40} height={40} />
-            <p>Byway</p>
-          </FlexContainer>
-          <p>Categories</p>
-          <S.SearchInput prefix={<SearchIcon />} placeholder="Search" />
+      <FlexContainer $gap={30} $alignItems="center" $direction="row">
+        <FlexContainer $gap={0} $alignItems="center" $direction="row">
+          <Image src={logoImg} alt="logo" width={40} height={40} />
+          <p>Byway</p>
         </FlexContainer>
+        <p>Categories</p>
+        <S.SearchInput prefix={<SearchIcon />} placeholder="Search" />
         <p>Teach on Byway</p>
       </FlexContainer>
       <S.Profile>

@@ -1,6 +1,6 @@
-import { messengerApi } from '@/api/messenger/messengerApi';
+import { Dialogs } from '@/components/Messenger/Dialogs/Dialogs';
+import { DialogsLayout } from '@/components/Messenger/DialogsLayout/DialogsLayout';
 import { SortingType } from '@/models/common';
-import { Suspense } from 'react';
 
 export default async function Page({
   searchParams,
@@ -9,13 +9,8 @@ export default async function Page({
 }) {
   const sortType = (searchParams?.sort ?? 'relevance') as SortingType;
   return (
-    <Suspense key={sortType} fallback={<div>Loading</div>}>
-      <SuspendedPage sortType={sortType} />
-    </Suspense>
+    <DialogsLayout>
+      <Dialogs sortingType={sortType} />
+    </DialogsLayout>
   );
 }
-
-const SuspendedPage = async ({ sortType }: { sortType: SortingType }) => {
-  await messengerApi.getDialogs({ sort_type: sortType });
-  return <div>Messenger</div>;
-};

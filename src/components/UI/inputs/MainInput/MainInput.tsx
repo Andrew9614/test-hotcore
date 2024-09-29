@@ -6,6 +6,7 @@ import {
   ReactNode,
 } from 'react';
 import * as S from './MainInputStyles';
+import { InputContainer, InputErrorMessage } from '../commonStyles';
 
 export type MainInputProps = Omit<
   DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
@@ -39,14 +40,14 @@ export const MainInput = forwardRef<HTMLDivElement, MainInputProps>(
   ) {
     return (
       <S.Container ref={ref} className={className}>
-        <S.InputContainer>
+        <InputContainer className='main-input-wrapper'>
           <S.InputWrapper>
             {prefix && <S.Prefix {...prefixProps}>{prefix}</S.Prefix>}
             <S.Input {...inputProps} />
             {suffix && <S.Suffix {...suffixProps}>{suffix}</S.Suffix>}
           </S.InputWrapper>
-        </S.InputContainer>
-        {error && <S.InputErrorMessage>{error}</S.InputErrorMessage>}
+        </InputContainer>
+        {error && <InputErrorMessage>{error}</InputErrorMessage>}
       </S.Container>
     );
   }
