@@ -36,25 +36,25 @@ export const ProfileCard = () => {
         </S.NavLink>
         <S.NavLink
           href={PROFILE_ROUTE + '/courses'}
-          aria-selected={currentPath === PROFILE_ROUTE + '/courses'}
+          aria-selected={currentPath.includes(PROFILE_ROUTE + '/courses')}
         >
           My Courses
         </S.NavLink>
         <S.NavLink
           href={PROFILE_ROUTE + '/teachers'}
-          aria-selected={currentPath === PROFILE_ROUTE + '/teachers'}
+          aria-selected={currentPath.includes(PROFILE_ROUTE + '/teachers')}
         >
           Teachers
         </S.NavLink>
         <S.NavLink
           href={PROFILE_ROUTE + '/messenger'}
-          aria-selected={currentPath === PROFILE_ROUTE + '/messenger'}
+          aria-selected={currentPath.includes(PROFILE_ROUTE + '/messenger')}
         >
           Message
         </S.NavLink>
         <S.NavLink
           href={PROFILE_ROUTE + '/my-reviews'}
-          aria-selected={currentPath === PROFILE_ROUTE + '/my-reviews'}
+          aria-selected={currentPath.includes(PROFILE_ROUTE + '/my-reviews')}
         >
           My Reviews
         </S.NavLink>

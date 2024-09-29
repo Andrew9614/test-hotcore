@@ -11,7 +11,7 @@ import { IconButton } from '../UI/buttons/IconButton';
 export const Header = () => {
   return (
     <S.Container>
-      <FlexContainer $gap={30} $alignItems="center" $direction="row">
+      <S.NavContainer $gap={30} $alignItems="center" $direction="row">
         <FlexContainer $gap={0} $alignItems="center" $direction="row">
           <Image src={logoImg} alt="logo" width={40} height={40} />
           <p>Byway</p>
@@ -19,7 +19,7 @@ export const Header = () => {
         <p>Categories</p>
         <S.SearchInput prefix={<SearchIcon />} placeholder="Search" />
         <p>Teach on Byway</p>
-      </FlexContainer>
+      </S.NavContainer>
       <S.Profile>
         <IconButton>
           <FavoritesIcon />

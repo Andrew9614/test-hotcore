@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { PropsWithChildren, Suspense } from 'react';
+import { PropsWithChildren } from 'react';
 import * as S from './DialogsLayoutStyles';
 import { FlexContainer } from '@/components/UI/common/FlexContainer';
 import SearchIcon from '@/assets/svg/magnifier-icon.svg';
@@ -11,6 +11,7 @@ import {
   MainSelectOptionType,
 } from '@/components/UI/inputs/MainSelect/MainSelect';
 import { SortingType } from '@/models/common';
+import { MainSuspense } from '@/components/UI/layouts/MainSuspense';
 
 const sortOptions: MainSelectOptionType<SortingType>[] = [
   { value: 'date', label: 'Date' },
@@ -44,9 +45,7 @@ export const DialogsLayout = ({ children }: PropsWithChildren) => {
           </S.FilterButton>
         </FlexContainer>
       </S.FiltersContainer>
-      <Suspense key={sortType} fallback={<div>Loading</div>}>
-        {children}
-      </Suspense>
+      <MainSuspense keyProp={sortType}>{children}</MainSuspense>
     </S.Container>
   );
 };

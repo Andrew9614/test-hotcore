@@ -19,6 +19,10 @@ export const Container = styled.header`
   z-index: 99;
 `;
 
+export const NavContainer = styled(FlexContainer)`
+  flex: 1;
+`
+
 export const Profile = styled(FlexContainer)`
   flex-direction: row;
   gap: 18px;
@@ -39,5 +43,5 @@ export const ProfileButton = styled.button`
 
 export const SearchInput = styled(MainInput)`
   flex: 1;
-  flex-basis: 630px;
+  max-width: 630px;
 `;
